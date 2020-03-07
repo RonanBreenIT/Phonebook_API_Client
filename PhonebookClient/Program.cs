@@ -67,7 +67,7 @@ namespace PhonebookClient
                 response = client.PostAsJsonAsync("UpdateEntry", contact2).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    //Console.WriteLine("\nUpdated Contact: " + contact2.Name);
+                    Console.WriteLine("\nUpdated Contact: " + contact2.Name);
                     //string result = response.Content.ReadAsStringAsync().Result;
                     //Console.WriteLine(result);
                 }
