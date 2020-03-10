@@ -64,7 +64,7 @@ namespace PhonebookClient
 
                 // Post: api/Phonebook/UpdateEntry {FromBody}
                 Phonebook contact2 = new Phonebook() { Name = "new updated Name", ID = 51, Number = "87878677", Address = "26 new street" };
-                response = client.PostAsJsonAsync("UpdateEntry", contact2).Result;
+                response = client.PutAsJsonAsync("UpdateEntry", contact2).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine("\nUpdated Contact: " + contact2.Name);
